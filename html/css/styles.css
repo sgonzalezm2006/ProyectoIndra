@@ -1,0 +1,483 @@
+* {
+    --primary-color: #2e7d32;
+    --secondary-color: #81c784;
+    --accent-color: #ff8f00;
+    --dark-color: #263238;
+    --light-color: #f5f5f5;
+    --text-color: #333;
+    --text-light: #757575;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: #2e7d32
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #81c784;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #2e7d32;
+}
+
+.btn-secondary {
+    background-color: #ff8f00;
+}
+
+/* Header */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #2e7d32;
+    font-size: 1.8rem;
+}
+
+.logo p {
+    color: #757575;
+    font-size: 0.9rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #2e7d32;
+}
+
+nav ul li a.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2e7d32;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.destacados {
+    padding: 2rem;
+    text-align: center;
+}
+
+.destacados h2 {
+    margin-bottom: 2rem;
+    color: #2e7d32
+}
+
+.carrusel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.evento-destacado {
+    min-width: 300px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.evento-destacado:hover {
+    transform: translateY(-5px);
+}
+
+.evento-destacado img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.evento-destacado h3 {
+    padding: 1rem 1rem 0.5rem;
+    color: #2e7d32
+}
+
+.evento-destacado p {
+    padding: 0 1rem 1rem;
+    color: #757575;
+    font-size: 0.9rem;
+}
+
+.evento-destacado .btn {
+    margin-bottom: 1rem;
+}
+
+/* Categorías */
+.categorias {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.categorias h2 {
+    margin-bottom: 2rem;
+    color: #2e7d32
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.categoria {
+    background: white;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.categoria img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.categoria h3 {
+    font-size: 1rem;
+    color: #2e7d32
+}
+
+.listado-eventos {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.listado-eventos h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2e7d32
+}
+
+.filtros {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.eventos-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.evento {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.evento-imagen {
+    flex: 0 0 250px;
+}
+
+.evento-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.evento-info {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.evento-info h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+.evento-fecha {
+    color: #ff8f00;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.evento-descripcion {
+    margin-bottom: 1rem;
+    color: #757575;
+}
+
+.evento-detalles {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.evento-categoria, .evento-ubicacion {
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.evento-categoria {
+    background-color: #81c784;
+    color: white;
+}
+
+.evento-ubicacion {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.detalle-evento {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.evento-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.evento-header h2 {
+    color: #2e7d32;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.evento-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    color: #757575;
+}
+
+.evento-categoria {
+    background-color: #81c784;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+}
+
+.evento-content {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.evento-imagen-principal {
+    margin-bottom: 2rem;
+}
+
+.evento-imagen-principal img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.evento-descripcion h3,
+.evento-organizador h3,
+.evento-inscripcion h3,
+.evento-ubicacion-detalle h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.evento-descripcion ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.evento-organizador {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.organizador-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.organizador-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+    padding: 0.5rem;
+}
+
+.evento-inscripcion {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.inscripcion-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.evento-ubicacion-detalle {
+    margin-top: 2rem;
+}
+
+.mapa {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Footer */
+footer {
+    background-color: #263238;
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: #81c784;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+}
